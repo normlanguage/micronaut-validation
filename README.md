@@ -1,3 +1,5 @@
 # Micronaut Validation
 
-`micronaut.validation@1` 绑定 Micronaut Validation 5.1.0 的运行时与 `@Validated` 编译期契约。可运行示例位于 `micronaut/validation/Main.norm`。
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+`micronaut.validation@1` binds the runtime and `@Validated` compile-time contract of Micronaut Validation 5.1.0. A runnable example is in `micronaut/validation/Main.norm`.
