@@ -1,0 +1,33 @@
+import jakarta.validation.constraints.Size
+import micronaut.http.annotation.Controller
+import micronaut.http.annotation.Get
+import micronaut.http.annotation.QueryValue
+import micronaut.validation.Validated
+import micronaut.web.MicronautApplication
+import micronaut.web.MicronautConfig
+import micronaut.web.Micronaut
+import micronaut.web.Server
+import std.application.Application
+
+@Controller("/registration")
+@Validated()
+public class RegistrationRoutes {
+  @Get(value: "/name", produces: ["text/plain"])
+  String register(@QueryValue @Size(min: 3) String name) {
+    return "Accepted: " + name
+  }
+}
+
+Module module() {
+  module(dependencies: [
+    dependency(repository: "github", name: "micronaut.web", version: 7),
+    dependency(repository: "github", name: "micronaut.validation", version: 3),
+    dependency(repository: "github", name: "jakarta.validation", version: 3)
+  ])
+}
+
+public Application application() {
+  return MicronautApplication(config: MicronautConfig(
+    micronaut: Micronaut(server: Server(host: "127.0.0.1", port: 18769))
+  ))
+}
