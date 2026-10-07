@@ -20,9 +20,9 @@ public class RegistrationRoutes {
 
 Module module() {
   module(dependencies: [
-    dependency(repository: "github", name: "micronaut.web", version: 9),
-    dependency(repository: "github", name: "micronaut.validation", version: 3),
-    dependency(repository: "github", name: "jakarta.validation", version: 4)
+    dependency(repository: "github", name: "micronaut.web", version: 10),
+    dependency(repository: "github", name: "micronaut.validation", version: 4),
+    dependency(repository: "github", name: "jakarta.validation", version: 5)
   ])
 }
 
